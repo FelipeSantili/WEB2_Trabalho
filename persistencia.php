@@ -9,7 +9,7 @@ function salvarDados(array $array) {
                       $json);
 }
 
-function buscarDados() : array {
+function buscarDados() {
     $dados = array();
     
     if(file_exists(DIR_PERSISTENCIA)) {
