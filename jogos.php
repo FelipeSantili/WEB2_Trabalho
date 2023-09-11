@@ -192,7 +192,7 @@ if(isset($_POST['submetido'])) {
                 ?></td>
                 <td><?= $j['preco'] ?></td>
                 <td><?= $j['desenvolvedora'] ?></td>
-                <td><a href="jogos_del.php?id=<?= $l['id'] ?>" 
+                <td><a href="jogos_del.php?id=<?= $j['id'] ?>" 
                         onclick="return confirm('Confirma a exclusão?');">
                         Excluir</a></td>
             </tr>   
