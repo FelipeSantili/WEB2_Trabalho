@@ -94,6 +94,13 @@ if(isset($_POST['submetido'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        label{
+            display: flex;
+            flex-direction: row;
+            justify-content: initial;
+        }
+    </style>
     <title>Cadastro de Jogos</title>
 </head>
 <body>
@@ -102,12 +109,14 @@ if(isset($_POST['submetido'])) {
 
     <h3>Formulário de Jogos</h3>
     <form action="" method="POST">
+        <label for="titulo">Titulo</label>
         <input type="text" name="titulo" 
             placeholder="Informe o título"
             value="<?= $titulo ?>" />
         
         <br><br>
 
+        <label for="genero">Gênero</label>
         <select name="genero">
             <option value="">---Selecione o gênero---</option>
             <option value="A" <?php if($genero == 'A') echo 'selected'; ?>
@@ -124,17 +133,20 @@ if(isset($_POST['submetido'])) {
 
         <br><br>
 
-        <input type="text" id="preco" name="preco" pattern="^\d+(\.\d{2})?$"
+        <label for="preco">Preço</label>
+        <input type="text" id="preco" name="preco" pattern="^\d+(\,\d{2})?$"
          required placeholder="Informe o preço R$" value="<?= $preco ?>" />
 
         <br><br>
 
+        <label for="deselvolvedora">Desenvolvedora</label>
         <input type="text" name="desenvolvedora" 
             placeholder="Informe a desenvolvedora"
             value="<?= $desenvolvedora ?>" />
 
         <br><br>
 
+        <label for="descricao">Descrição</label>
         <textarea id="descricao" name="descricao" rows="4" cols="50" required><?= $descricao ?></textarea>
 
         <br><br>
